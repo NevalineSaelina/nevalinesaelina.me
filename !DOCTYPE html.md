@@ -1,0 +1,261 @@
+<!DOCTYPE html>  
+<html lang="zh-TW">  
+<head>  
+  <meta charset="UTF-8">  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <title>Nemu's Sekai **ฅ**(˶**ᵔ** **ᵕ** **ᵔ**˶)**ฅ** 🎀</title>  
+  <!-- Tailwind CSS & FontAwesome Icons -->  
+  <script src="https://cdn.tailwindcss.com"></script>  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">  
+  <style>  
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Quicksand:wght@500;600;700&display=swap');  
+    body {  
+      font-family: 'Quicksand', 'Noto Sans JP', sans-serif;  
+      background: linear-gradient(135deg, #fce4ec 0%, #e8eaf6 50%, #e0f2fe 100%);  
+    }  
+    .glass-card {  
+      background: rgba(255, 255, 255, 0.75);  
+      backdrop-filter: blur(16px);  
+      -webkit-backdrop-filter: blur(16px);  
+      border: 1px solid rgba(255, 255, 255, 0.8);  
+    }  
+    .tag-badge {  
+      transition: all 0.2s ease;  
+    }  
+    .tag-badge:hover {  
+      transform: translateY(-2px);  
+      box-shadow: 0 4px 12px rgba(244, 114, 182, 0.25);  
+    }  
+    .lang-btn.active {  
+      background-color: #f472b6;  
+      color: white;  
+      box-shadow: 0 2px 8px rgba(244, 114, 182, 0.4);  
+    }  
+  </style>  
+</head>  
+<body class="min-h-screen text-slate-700 py-10 px-4 flex flex-col items-center justify-center">  
+  
+  <!-- **語言切換選單** (Language Switcher) -->  
+  <div class="fixed top-4 right-4 z-50 glass-card px-3 py-1.5 rounded-full shadow-lg flex items-center space-x-1 border border-white">  
+    <span class="text-xs mr-1 text-pink-400 font-bold">🌐</span>  
+    <button onclick="setLang('zh-TW')" id="btn-zh-TW" class="lang-btn active text-xs px-2.5 py-1 rounded-full font-semibold transition">**繁體**</button>  
+    <button onclick="setLang('ja')" id="btn-ja" class="lang-btn text-xs px-2.5 py-1 rounded-full font-semibold transition">**日本語**</button>  
+    <button onclick="setLang('en')" id="btn-en" class="lang-btn text-xs px-2.5 py-1 rounded-full font-semibold transition">EN</button>  
+    <button onclick="setLang('zh-CN')" id="btn-zh-CN" class="lang-btn text-xs px-2.5 py-1 rounded-full font-semibold transition">**简体**</button>  
+  </div>  
+  
+  <!-- **主要卡片容器** -->  
+  <main class="max-w-2xl w-full glass-card rounded-3xl p-6 md:p-10 shadow-2xl space-y-8 my-8 relative overflow-hidden">  
+      
+    <!-- **背景可愛微光效果** -->  
+    <div class="absolute -top-10 -left-10 w-40 h-40 bg-pink-200 rounded-full blur-3xl opacity-60 pointer-events-none"></div>  
+    <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-purple-200 rounded-full blur-3xl opacity-60 pointer-events-none"></div>  
+  
+    <!-- **個人頭像與基本資訊區塊** -->  
+    <div class="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-6">  
+      <div class="relative group">  
+        <img src="./avatar.jpg" onerror="this.src='https://images.unsplash.com/photo-1578632767115-351597cf2477?w=300'" alt="Nemu's Avatar" class="w-28 h-28 md:w-32 md:h-32 rounded-full object-cover border-4 border-white shadow-md transition duration-300 group-hover:scale-105">  
+        <span class="absolute bottom-1 right-1 bg-pink-400 text-white text-xs px-2 py-0.5 rounded-full border-2 border-white font-bold">**喵**~</span>  
+      </div>  
+        
+      <div class="text-center md:text-left space-y-1">  
+        <h1 class="text-2xl md:text-3xl font-extrabold text-slate-800 tracking-wide flex items-center justify-center md:justify-start gap-2">  
+          <span>Nemu (**ねむ**)</span>  
+          <span class="text-pink-400 text-xl">🎀</span>  
+        </h1>  
+        <p class="text-xs text-pink-500 font-semibold tracking-wider">Nevaline Saelina · **叫我** Nemu **醬就好喵** **૮**꒰**ྀི**ฅ́˘ฅ̀꒱**ა**</p>  
+          
+        <div class="flex flex-wrap items-center justify-center md:justify-start gap-2 pt-2 text-xs text-slate-500 font-medium">  
+          <span class="bg-pink-100/80 text-pink-600 px-2.5 py-1 rounded-md">10**生** 🍼</span>  
+          <span class="bg-purple-100/80 text-purple-600 px-2.5 py-1 rounded-md">IP: **廣州** / **佛山** 📍</span>  
+          <span class="bg-blue-100/80 text-blue-600 px-2.5 py-1 rounded-md">⚧️ 🏳️‍⚧️ 🤍</span>  
+        </div>  
+      </div>  
+    </div>  
+  
+    <!-- **經典動態對白**/**哲學標語** -->  
+    <div class="bg-white/60 border border-pink-200/60 rounded-2xl p-4 text-center text-pink-600/90 font-medium text-sm italic shadow-inner space-y-1">  
+      <p>✟ꈍ**ᴗ**ꈍ✟ "**你覺得我是怎麼樣的人，就是怎麼樣的人。**"</p>  
+      <p id="quote-text" class="text-xs text-slate-500 not-italic pt-1"></p>  
+    </div>  
+  
+    <!-- **核心介紹語彙** -->  
+    <section class="space-y-3 text-sm text-slate-600 leading-relaxed bg-white/40 p-5 rounded-2xl border border-white/60">  
+      <p id="bio-p1">**喜歡跨語言、多文化、旅行、地理、歷史與哲學、運動、金融學、文化學、旅遊、宇宙學、心理學、數碼、**coding… ꒰**՞** °**ᗝ**°**՞**.**ᐟ**.**ᐟ**</p>  
+      <p id="bio-p2">**喜歡架子鼓、畫畫、音樂、音遊、舞蹈，**ACG**與遊戲**…… 𐔌**՞** ܸ.ˬ.ܸ**՞**𐦯</p>  
+    </section>  
+  
+    <!-- **愛好與探索標籤** (Interests) -->  
+    <section class="space-y-3">  
+      <h2 class="text-xs font-bold uppercase tracking-widest text-pink-400 flex items-center gap-1.5">  
+        <i class="fa-solid fa-heart"></i> <span id="title-interests">**探索領域** & **愛好**</span>  
+      </h2>  
+      <div class="flex flex-wrap gap-2 text-xs font-medium">  
+        <span class="tag-badge bg-pink-100 text-pink-700 px-3 py-1.5 rounded-xl">🌐 **跨語言** & **多文化**</span>  
+        <span class="tag-badge bg-purple-100 text-purple-700 px-3 py-1.5 rounded-xl">🌌 **宇宙學** & **哲學**</span>  
+        <span class="tag-badge bg-blue-100 text-blue-700 px-3 py-1.5 rounded-xl">🧠 **心理學** & **地理**</span>  
+        <span class="tag-badge bg-emerald-100 text-emerald-700 px-3 py-1.5 rounded-xl">💻 Coding & **數碼**</span>  
+        <span class="tag-badge bg-amber-100 text-amber-700 px-3 py-1.5 rounded-xl">🥁 **架子鼓** & **舞蹈**</span>  
+        <span class="tag-badge bg-rose-100 text-rose-700 px-3 py-1.5 rounded-xl">🎨 **畫畫** & **音樂**</span>  
+        <span class="tag-badge bg-indigo-100 text-indigo-700 px-3 py-1.5 rounded-xl">📈 **金融學** & **歷史**</span>  
+      </div>  
+    </section>  
+  
+    <!-- **遊戲世界** (Games) -->  
+    <section class="space-y-3">  
+      <h2 class="text-xs font-bold uppercase tracking-widest text-purple-400 flex items-center gap-1.5">  
+        <i class="fa-solid fa-gamepad"></i> <span id="title-games">**遊戲世界** (**玩過了** & **添加中**..)</span>  
+      </h2>  
+      <div class="flex flex-wrap gap-2 text-xs font-medium text-slate-700">  
+        <span class="tag-badge bg-white/80 border border-purple-200 px-3 py-1.5 rounded-xl">🎵 maimai DX</span>  
+        <span class="tag-badge bg-white/80 border border-blue-200 px-3 py-1.5 rounded-xl">💙 **蔚藍檔案** (BA)</span>  
+        <span class="tag-badge bg-white/80 border border-pink-200 px-3 py-1.5 rounded-xl">🎹 Project Sekai (PJSK)</span>  
+        <span class="tag-badge bg-white/80 border border-emerald-200 px-3 py-1.5 rounded-xl">🟩 Minecraft</span>  
+        <span class="tag-badge bg-white/80 border border-amber-200 px-3 py-1.5 rounded-xl">🚗 GTA **系列** / **汽車遊戲**</span>  
+        <span class="tag-badge bg-white/80 border border-red-200 px-3 py-1.5 rounded-xl">🎯 CS **系列** & L4D **系列**</span>  
+        <span class="tag-badge bg-white/80 border border-yellow-200 px-3 py-1.5 rounded-xl">🌾 **荒野大鏢客系列**</span>  
+        <span class="tag-badge bg-white/80 border border-indigo-200 px-3 py-1.5 rounded-xl">⚔️ **鋼鐵雄心**4</span>  
+        <span class="tag-badge bg-white/80 border border-cyan-200 px-3 py-1.5 rounded-xl">🏙️ **城市：天際線**</span>  
+        <span class="tag-badge bg-white/80 border border-teal-200 px-3 py-1.5 rounded-xl">✨ **原神**</span>  
+        <span class="tag-badge bg-white/80 border border-violet-200 px-3 py-1.5 rounded-xl">👓 VRChat</span>  
+        <span class="tag-badge bg-white/80 border border-pink-300 px-3 py-1.5 rounded-xl">💊 **主播女孩重度依賴**</span>  
+      </div>  
+    </section>  
+  
+    <!-- **喜愛的** ACG **角色**/**系列** -->  
+    <section class="space-y-3">  
+      <h2 class="text-xs font-bold uppercase tracking-widest text-indigo-400 flex items-center gap-1.5">  
+        <i class="fa-solid fa-star"></i> <span id="title-acg">**喜愛的** ACG **角色** / **系列**</span>  
+      </h2>  
+      <div class="flex flex-wrap gap-1.5 text-xs">  
+        <span class="bg-pink-50 text-pink-600 px-2.5 py-1 rounded-lg border border-pink-100">**初音未來**</span>  
+        <span class="bg-red-50 text-red-600 px-2.5 py-1 rounded-lg border border-red-100">**重音** Teto</span>  
+        <span class="bg-amber-50 text-amber-700 px-2.5 py-1 rounded-lg border border-amber-100">**葬送的芙莉蓮**</span>  
+        <span class="bg-fuchsia-50 text-fuchsia-600 px-2.5 py-1 rounded-lg border border-fuchsia-100">**曉山瑞希**</span>  
+        <span class="bg-purple-50 text-purple-600 px-2.5 py-1 rounded-lg border border-purple-100">**宵崎奏**</span>  
+        <span class="bg-emerald-50 text-emerald-600 px-2.5 py-1 rounded-lg border border-emerald-100">**納西妲**</span>  
+        <span class="bg-rose-50 text-rose-600 px-2.5 py-1 rounded-lg border border-rose-100">**可莉** Klee</span>  
+        <span class="bg-orange-50 text-orange-600 px-2.5 py-1 rounded-lg border border-orange-100">Momoi</span>  
+        <span class="bg-lime-50 text-lime-700 px-2.5 py-1 rounded-lg border border-lime-100">GUMI</span>  
+        <span class="bg-purple-50 text-purple-700 px-2.5 py-1 rounded-lg border border-purple-100">EVA</span>  
+        <span class="bg-blue-50 text-blue-600 px-2.5 py-1 rounded-lg border border-blue-100">**莎露朵**</span>  
+        <span class="bg-teal-50 text-teal-600 px-2.5 py-1 rounded-lg border border-teal-100">**甘城貓貓**</span>  
+        <span class="bg-cyan-50 text-cyan-600 px-2.5 py-1 rounded-lg border border-cyan-100">**芙寧娜**</span>  
+        <span class="bg-sky-50 text-sky-600 px-2.5 py-1 rounded-lg border border-sky-100">Gura</span>  
+        <span class="bg-blue-50 text-blue-700 px-2.5 py-1 rounded-lg border border-blue-100">**星野** & **白子**</span>  
+        <span class="bg-pink-50 text-pink-700 px-2.5 py-1 rounded-lg border border-pink-100">MMJ & 25**時**</span>  
+        <span class="bg-slate-100 text-slate-700 px-2.5 py-1 rounded-lg border border-slate-200">MyGO!!!!!</span>  
+        <span class="bg-indigo-50 text-indigo-600 px-2.5 py-1 rounded-lg border border-indigo-100">Hololive (Pekora, Ame...)</span>  
+      </div>  
+    </section>  
+  
+    <!-- Nemu **的心靈寄語** / **詩意表達** -->  
+    <section class="bg-gradient-to-r from-pink-50/80 via-purple-50/80 to-blue-50/80 p-5 rounded-2xl border border-white text-xs md:text-sm text-slate-600 space-y-2 leading-relaxed shadow-sm">  
+      <p class="font-semibold text-pink-500">I'm still learning more languages and discovering more cultures. ✨</p>  
+      <p id="poem-1">**我喜歡可愛的東西，也喜歡很大的問題。**(⸝⸝ᵕᴗᵕ⸝⸝)</p>  
+      <p id="poem-2">**喜歡一首歌可以很單純，喜歡一種語言可以很自由，喜歡一個世界也不需要只有一個理由。**</p>  
+      <p id="poem-3" class="text-purple-600 font-medium">**我的愛好還在增加，我的答案也還沒有寫完，我也還在探索自己⋯⋯** 🌸</p>  
+    </section>  
+  
+    <!-- **社交與** Steam **好友區塊** -->  
+    <div class="pt-2 flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-slate-200/60">  
+        
+      <!-- Steam **卡片** -->  
+      <a href="https://steamcommunity.com/search/users/#text=1528741837" target="_blank" class="w-full sm:w-auto flex items-center justify-center space-x-2 bg-slate-800 hover:bg-slate-900 text-white px-4 py-2.5 rounded-xl text-xs font-semibold transition shadow-md group">  
+        <i class="fa-brands fa-steam text-base group-hover:rotate-12 transition"></i>  
+        <span>Steam: <strong class="text-pink-300">1528741837</strong></span>  
+        <span class="text-[10px] bg-slate-700 px-1.5 py-0.5 rounded text-slate-300">**歡迎加我** 🎮</span>  
+      </a>  
+  
+      <!-- **歡迎對話標語** -->  
+      <div class="text-center sm:text-right text-xs text-pink-500 font-semibold space-y-0.5">  
+        <p id="welcome-msg">**如果也想認識不同的人、不同的世界，那就來聊聊吧！ฅ**(=^**･**ω**･**^=)**ฅ**</p>  
+        <p class="text-[11px] text-slate-400">**世界很大，先從一個「喵」開始。**🌸</p>  
+      </div>  
+  
+    </div>  
+  
+  </main>  
+  
+  <!-- **頁尾** -->  
+  <footer class="text-center text-xs text-slate-400 space-y-1">  
+    <p>© 2026 Nemu (Nevaline Saelina) · Built with ❤️ & **ฅ**'ω'**ฅ**</p>  
+  </footer>  
+  
+  <!-- **語言切換** JavaScript **腳本** -->  
+  <script>  
+    const i18n = {  
+      'zh-TW': {  
+        quote: '**如果也想認識不同的人、不同的世界，那就來聊聊吧，歡迎大家** 🌸',  
+        bio1: '**喜歡跨語言、多文化、旅行、地理、歷史與哲學、運動、金融學、文化學、旅遊、宇宙學、心理學、數碼、**coding…. ꒰**՞** °**ᗝ**°**՞**.**ᐟ**.**ᐟ**',  
+        bio2: '**喜歡架子鼓、畫畫、音樂、音遊、舞蹈，**ACG**與遊戲**…… 𐔌**՞** ܸ.ˬ.ܸ**՞**𐦯',  
+        titleInterests: '**探索領域** & **愛好**',  
+        titleGames: '**遊戲世界** (**玩過了** & **添加中**..)',  
+        titleAcg: '**喜愛的** ACG **角色** / **系列**',  
+        poem1: '**我喜歡可愛的東西，也喜歡很大的問題。**(⸝⸝ᵕᴗᵕ⸝⸝)',  
+        poem2: '**喜歡一首歌可以很單純，喜歡一種語言可以很自由，喜歡一個世界也不需要只有一個理由。**',  
+        poem3: '**我的愛好還在增加，我的答案也還沒有寫完，我也還在探索自己⋯⋯** 🌸',  
+        welcome: '**如果也想認識不同的人、不同的世界，那就來聊聊吧！ฅ**(=^**･**ω**･**^=)**ฅ**'  
+      },  
+      'ja': {  
+        quote: '**いろんな人や世界に出会いたいなら、ぜひ気軽に話しかけてね** 🌸',  
+        bio1: '**言語学、多文化探求、旅行、地理、歴史、哲学、スポーツ、金融、宇宙学、心理学、ガジェット、**Coding**が大好き**… ꒰**՞** °**ᗝ**°**՞**.**ᐟ**.**ᐟ**',  
+        bio2: '**ドラム、お絵描き、音楽、音ゲー、ダンス、**ACG**とゲームが大好き**…… 𐔌**՞** ܸ.ˬ.ܸ**՞**𐦯',  
+        titleInterests: '**探求分野** **＆** **趣味**',  
+        titleGames: '**ゲームの世界** (**プレイ済み** **＆** **追加中**..)',  
+        titleAcg: '**大好きな** ACG **キャラ** / **シリーズ**',  
+        poem1: '**可愛いものが好き、そして大きな問いも好き。**(⸝⸝ᵕᴗᵕ⸝⸝)',  
+        poem2: '**曲を好きになるのはシンプルでいい。言語を好きになるのは自由でいい。世界を好きになるのに理由はひとつじゃなくていい。**',  
+        poem3: '**私の趣味はまだ増え続けていて、私の答えもまだ書き終わっていない。私もまだ自分を探求中⋯⋯** 🌸',  
+        welcome: '**世界は広い、まずは「にゃー」から始めよう！ฅ**(=^**･**ω**･**^=)**ฅ**'  
+      },  
+      'en': {  
+        quote: 'If you also want to meet different people and worlds, come and chat! 🌸',  
+        bio1: 'Loves multilingualism, cross-cultural exploration, travel, geography, history, philosophy, sports, finance, cosmology, psychology, gadgets, coding... ꒰**՞** °**ᗝ**°**՞**.**ᐟ**.**ᐟ**',  
+        bio2: 'Loves drums, drawing, music, rhythm games, dancing, ACG, and gaming... 𐔌**՞** ܸ.ˬ.ܸ**՞**𐦯',  
+        titleInterests: 'Interests & Exploration',  
+        titleGames: 'Gaming World (Played & Adding..)',  
+        titleAcg: 'Favorite ACG Characters / Series',  
+        poem1: 'I love cute things, and I also love big philosophical questions. (⸝⸝ᵕᴗᵕ⸝⸝)',  
+        poem2: 'Liking a song can be pure; liking a language can be free; loving a world needs more than just one reason.',  
+        poem3: 'My hobbies are still growing, my answers are not yet finished, and I am still exploring myself... 🌸',  
+        welcome: 'The world is huge, let\'s start with a "Meow"! **ฅ**(=^**･**ω**･**^=)**ฅ**'  
+      },  
+      'zh-CN': {  
+        quote: '**如果也想认识不同的人、不同的世界，那就来聊聊吧，欢迎大家** 🌸',  
+        bio1: '**喜欢跨语言、多文化、旅行、地理、历史与哲学、运动、金融学、文化学、旅游、宇宙学、心理学、数码、**coding…. ꒰**՞** °**ᗝ**°**՞**.**ᐟ**.**ᐟ**',  
+        bio2: '**喜欢架子鼓、画画、音乐、音游、舞蹈，**ACG**与游戏**…… 𐔌**՞** ܸ.ˬ.ܸ**՞**𐦯',  
+        titleInterests: '**探索领域** & **爱好**',  
+        titleGames: '**游戏世界** (**玩过了** & **添加中**..)',  
+        titleAcg: '**喜爱的** ACG **角色** / **系列**',  
+        poem1: '**我喜欢可爱的东西，也喜欢很大的问题。**(⸝⸝ᵕᴗᵕ⸝⸝)',  
+        poem2: '**喜欢一首歌可以很单纯，喜欢一种语言可以很自由，喜欢一个世界也不需要只有一个理由。**',  
+        poem3: '**我的爱好还在增加，我的答案也还没有写完，我也还在探索自己⋯⋯** 🌸',  
+        welcome: '**如果也想认识不同的人、不同的世界，那就来聊聊吧！ฅ**(=^**･**ω**･**^=)**ฅ**'  
+      }  
+    };  
+  
+    function setLang(lang) {  
+      // **切換按鈕高亮**  
+      document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));  
+      document.getElementById(`btn-${lang}`).classList.add('active');  
+  
+      // **更新文字**  
+      const t = i18n[lang];  
+      document.getElementById('quote-text').innerText = t.quote;  
+      document.getElementById('bio-p1').innerText = t.bio1;  
+      document.getElementById('bio-p2').innerText = t.bio2;  
+      document.getElementById('title-interests').innerText = t.titleInterests;  
+      document.getElementById('title-games').innerText = t.titleGames;  
+      document.getElementById('title-acg').innerText = t.titleAcg;  
+      document.getElementById('poem-1').innerText = t.poem1;  
+      document.getElementById('poem-2').innerText = t.poem2;  
+      document.getElementById('poem-3').innerText = t.poem3;  
+      document.getElementById('welcome-msg').innerText = t.welcome;  
+    }  
+  
+    // **預設為繁體中文**  
+    setLang('zh-TW');  
+  </script>  
+</body>  
+</html>  
